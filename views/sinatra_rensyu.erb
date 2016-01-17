@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitterクライアントサンプル</title>
+  </head>
+  <body>
+    <h1>Twitterクライアントサンプル</h1>
+
+    <form action="" method="POST">
+      <textarea name="tweet" cols="100" rows="6" maxlength="150", placeholder="いまどうしている"></textarea> <br />
+      <input type="submit" value="ツイート">
+    </form>
+
+    <div>
+      <h2>ユーザーのツイート一覧</h2>
+
+      <ul>
+        <% @items.each do |item| %>
+           <li><%= item.text %> </li>
+        <% end %>
+      </ul>
+
+    </div>
+
+  </body>
+</html>
