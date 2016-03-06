@@ -11,9 +11,23 @@ before do
     config.access_token        = '140300834-qZM9uKvSSMg8cVvME82M0UcclATMcbOATKX2iZuW'
     config.access_token_secret = ENV['ACCESS_TOKEN_SECRET']
   end
+  @client = client
   @items = client.home_timeline
 end
 
 get '/' do
+
   erb :sinatra_rensyu
+end
+
+post '/' do
+  @client.update(params[:tweet])
+  redirect '/'
+  erb :sinatra_rensyu
+end
+
+#client.update("test-tweet")####"test-tweet"とツイートする
+
+get '/abc' do
+  put "aaaa"
 end
