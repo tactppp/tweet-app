@@ -26,8 +26,6 @@ post '/' do
   erb :sinatra_rensyu
 end
 
-#client.update("test-tweet")####"test-tweet"とツイートする
-
 get '/abc' do
   put "aaaa"
 end
